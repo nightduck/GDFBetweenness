@@ -78,7 +78,7 @@ public class Consolidation {
         
         fin = new BufferedReader(new FileReader(new File(filename)));
         line = fin.readLine();          //Read node template
-        line += ",centrality VARCHAR";  //Append extra information
+        line += ",centrality DOUBLE";  //Append extra information
         fout.write(line + "\n");
         
         //Read each node, append centrality information, and append to output file
