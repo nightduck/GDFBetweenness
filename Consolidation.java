@@ -63,7 +63,7 @@ public class Consolidation {
             while((line = cen.readLine()) != null) {
                 //Each line. Add to appropriate dicitonary entry
                 long name = Long.parseLong(line.split(",")[0]);
-                long cenCount = Integer.parseInt(line.split(",")[1]);
+                long cenCount = Long.parseLong(line.split(",")[1]);
                 
                 //Increment centrality and put it back in the dictionary
                 dict.put(name, dict.get(name) + cenCount);
