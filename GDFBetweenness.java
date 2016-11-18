@@ -42,7 +42,7 @@ public class GDFBetweenness {
         long name;
         AttribNode parent;
         double distance;
-        int centrality;
+        long centrality;
 
 //        double x;  //EDITABLE add variables here if you need attributes in your calculations
 //        double y;
