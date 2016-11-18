@@ -2,22 +2,6 @@
 BUILD OUTPUT DESCRIPTION
 ========================
 
-There are 2 programs. The first calculates centrality by organizing the
-parallelization of the calculation. Note: THIS DOES NOT GENERATE THREADS.
-Rather, each process has to be started manually. Each needs to be told how
-many processes are doing the computation and where it is in the lineup. It
-then indepently computes its share of the Johnson's algorithm. Each process
-has to specify a .cen file to output. It is recommended to use #.cen, where
-# is the process number specified in the previous prompt. Although this is not
-required.
-
-The next program consolidates all the .cen files and generates a new .gdf file
-that has a new attribute for each node: the normalized centrality.
-
-In summary:
-GDFBetweenness turns .gdf input into .cen files
-Consolidation turns .gdf and .cen files into output .gdf file with centralities
-
 When you build an Java application project that has a main class, the IDE
 automatically copies all of the JAR
 files on the projects classpath to your projects dist/lib folder. The IDE

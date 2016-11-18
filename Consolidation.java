@@ -48,11 +48,11 @@ public class Consolidation {
         int vertexCount = 0;
         fin.readLine();   //Read in the node template
         String line = fin.readLine();
-        HashMap<Long, Integer> dict = new HashMap();
+        HashMap<Long, Long> dict = new HashMap();
         
         while(!line.substring(0, 8).equals("edgedef>")) {
             //Add each node to dictionary referenced by name at beginning of line
-            dict.put(Long.parseLong(line.split(",")[0]), 0);
+            dict.put(Long.parseLong(line.split(",")[0]), (long)0);
             vertexCount++;
             line = fin.readLine();
         }
@@ -63,7 +63,7 @@ public class Consolidation {
             while((line = cen.readLine()) != null) {
                 //Each line. Add to appropriate dicitonary entry
                 long name = Long.parseLong(line.split(",")[0]);
-                int cenCount = Integer.parseInt(line.split(",")[1]);
+                long cenCount = Integer.parseInt(line.split(",")[1]);
                 
                 //Increment centrality and put it back in the dictionary
                 dict.put(name, dict.get(name) + cenCount);

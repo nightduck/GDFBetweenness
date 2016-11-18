@@ -42,7 +42,7 @@ public class GDFBetweenness {
         long name;
         AttribNode parent;
         double distance;
-        int centrality;
+        long centrality;
 
 //        double x;  //EDITABLE add variables here if you need attributes in your calculations
 //        double y;
@@ -249,7 +249,7 @@ public class GDFBetweenness {
 
         for (Object n : g.vertexSet()) {
             out.write(((AttribNode) n).attrib[0] + ",");
-            out.write(Integer.toString(((AttribNode) n).centrality));
+            out.write(Long.toString(((AttribNode) n).centrality));
             out.write("\n");
         }
         out.close();
