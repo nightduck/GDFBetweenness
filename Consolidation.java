@@ -85,7 +85,7 @@ public class Consolidation {
         line = fin.readLine();
         while(!line.substring(0,8).equals("edgedef>")) {
             long name = Long.parseLong(line.split(",")[0]);
-            fout.write(line + "," + String.valueOf((double)dict.get(name)/(2*vertexCount*(vertexCount-1))) + "\n");
+            fout.write(line + "," + String.valueOf(dict.get(name)/(2*(double)vertexCount*((double)vertexCount-1))) + "\n");
             line = fin.readLine();
         }
         //Copy edge template and all edge lines to output file intact
